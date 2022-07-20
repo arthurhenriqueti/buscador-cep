@@ -23,6 +23,9 @@ const Home = () => {
             .get(`https://viacep.com.br/ws/${input}/json/`)
             .then((response) => {
                 setResultInput(response.data);
+            })
+            .catch((response) => {
+                setResultInput(response.data);
             });
         showInfo();
 
@@ -49,11 +52,19 @@ const Home = () => {
                         </button>
                     </div>
                     <div className="home-cep-area">
-                        <h2>{resultInput.cep}</h2>
-                        <span>{resultInput.logradouro}</span>
-                        <span>{resultInput.bairro}</span>
-                        <span>{resultInput.localidade}</span>
-                        <span>{resultInput.uf}</span>
+                        {resultInput ? (
+                            <>
+                                <h2>{resultInput.cep}</h2>
+                                <span>{resultInput.logradouro}</span>
+                                <span>{resultInput.bairro}</span>
+                                <span>{resultInput.localidade}</span>
+                                <span>{resultInput.uf}</span>
+                            </>
+                        ) : (
+                            <>
+                                <h2>CEP inválido!</h2>
+                            </>
+                        )}
                     </div>
                 </section>
             </main>
