@@ -65,12 +65,49 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                color: #fff;
                 cursor: pointer;
                 transition: transform 0.5s;
 
                 &:hover {
                     transform: scale(1.2);
                 }
+            }
+        }
+    }
+}
+
+.home-background.light-mode {
+    background: #cecece;
+
+    .home-area {
+        h1 {
+            color: #000;
+        }
+
+        .home-btn-search {
+            color: #000;
+        }
+
+        .home-input-area {
+            input {
+                color: #000;
+            }
+        }
+    }
+}
+
+.home-background.dark-mode {
+    background: linear-gradient(#121212, #212b46);
+
+    .home-area {
+        h1 {
+            color: #fff;
+        }
+
+        .home-input-area {
+            input {
+                color: #fff;
             }
         }
     }

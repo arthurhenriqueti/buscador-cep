@@ -45,7 +45,7 @@ const Home = () => {
                             }}
                         />
                         <button className="home-btn-search" onClick={searchCep}>
-                            <FiSearch size={25} color="#fff" />
+                            <FiSearch size={25} />
                         </button>
                     </div>
                     <div className="home-cep-area">

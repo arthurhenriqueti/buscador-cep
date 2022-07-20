@@ -1,5 +1,20 @@
 header {
     height: 90px;
     display: flex;
-    background-color: #cecece;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #121212;
+
+    .header-light-mode {
+        margin-right: 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .header-dark-mode {
+        display: none;
+        margin-right: 20px;
+        color: #000;
+        cursor: pointer;
+    }
 }
